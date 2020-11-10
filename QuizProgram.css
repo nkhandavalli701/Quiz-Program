@@ -8,3 +8,12 @@ body{
 .myDiv {
   text-align: center;
 }
+.nbutton {
+  background-color: #266150;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+}
