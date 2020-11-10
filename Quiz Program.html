@@ -1,0 +1,76 @@
+<html>
+  <head>
+      <title>Quiz Program</title>
+        <link rel="stylesheet" href="QuizProgram.css">
+      <script>
+      var score = 0;
+      var questionCount = 0;
+      function gradeQuiz()
+      {
+        var answer = document.getElementById("answer").value;
+
+        if (questionCount == 0){
+          if (answer == 60){
+              score = score + 1;
+            }
+            document.getElementById("question").innerHTML = "What is the capital of Nebraska?";
+
+          }
+          if (questionCount == 1){
+            if (answer == "Lincoln"){
+              score = score + 1;
+            }
+            document.getElementById("question").innerHTML = "What is 2 x 4 ?";
+
+          }
+          if (questionCount == 2){
+
+            if (answer == 8){
+
+              score = score +1;
+
+            }
+              end();
+        }
+
+        questionCount = questionCount + 1;
+      }
+      function end()
+      {
+
+        document.getElementById("question").style.visibility = "hidden";
+        document.getElementById("answer").style.visibility = "hidden";
+        document.getElementById("nbutton").style.visibility = "hidden";
+        document.getElementById("final").innerHTML = "Your score: " + score + "/3";
+        document.getElementById("Answer1").innerHTML = "Answer 1: 60";
+        document.getElementById("Answer2").innerHTML = "Answer 2: Lincoln";
+        document.getElementById("Answer3").innerHTML = "Answer 3: 8";
+      }
+    </script>
+
+      </head>
+
+      <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="myDiv">
+        <h2>Quiz Time!<h2>
+        <br>
+        <span id = "question">How many seconds are in a minute?</span>
+        <input type = "text" id = "answer">
+        <input id = "nbutton" type = "button" value = "Submit Answer" onclick = "gradeQuiz()">
+        <span id= "end">
+        <br>
+        <span id = "final"></span>
+        <br>
+        <span id = "Answer1"></span>
+          <br>
+        <span id = "Answer2"></span>
+          <br>
+        <span id = "Answer3"></span>
+</span>
+</div>
+      </body>
+</html>
